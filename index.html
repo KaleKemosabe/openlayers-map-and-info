@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OpenLayers Project</title>
+    <link rel="stylesheet" href="libs/v6.5.0-dist/ol.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-1">
+            <div class="column-navigation">
+                <a title="Home" id="Home" class="active"><i class="fas fa-home" id="Home"></i></a>
+                <a title="Perth" id="Perth"><i class="far fa-circle" id="Perth"></i></a>
+                <a title="Adelaide" id="Adelaide"><i class="far fa-circle" id="Adelaide"></i></a>
+                <a title="Melbourne" id="Melbourne"><i class="far fa-circle" id="Melbourne"></i></a>
+                <a title="Brisbane" id="Brisbane"><i class="far fa-circle" id="Brisbane"></i></a>
+                <a title="Darwin" id="Darwin"><i class="far fa-circle" id="Darwin"></i></a>
+                <a title="Hobart" id="Hobart"><i class="far fa-circle" id="Hobart"></i></a>
+                <a title="Sydney" id="Sydney"><i class="far fa-circle" id="Sydney"></i></a>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="column-map" id="openlayers-map"></div>
+        </div>
+
+        <div class="grid-3">
+            <div class="column-menu" id="menu-information">
+                <p id="cityname">Welcome to Australian Capital Cities Tour Map</p>
+                <img id="cityimage" src="./data/City_images/Australian_Flag.jpg" alt="flag">
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/v6.5.0-dist/ol.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
