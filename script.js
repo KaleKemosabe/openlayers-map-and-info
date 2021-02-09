@@ -1,10 +1,11 @@
 window.onload = init;
 
 function init() {
+    const austrCenterCoordinate = [15091875.539375868, -2890099.0297847847];
     const map = new ol.Map({
         view: new ol.View({
-            center: [15091875.539375868, -2890099.0297847847],
-            zoom: 1,
+            center: austrCenterCoordinate,
+            zoom: 4,
             extent: [11644482.371265175, -5927677.981920381, 17897308.66780227, 423055.8371644793]
         }),
         layers: [
@@ -110,23 +111,46 @@ function init() {
         let currentActiveStyledElement = document.querySelector('.active');
         currentActiveStyledElement.className = currentActiveStyledElement.className.replace('active', '');
         clickedAnchorElement.className = 'active';
-        
-        // change view based on feature
-        let featureCoordinates = feature.get('geometry').getCoordinates();
-        mapView.animate({center: featureCoordinates}, {zoom: 5})
 
+// default style for all features
         let aussieCitiesFeatures = austCitiesLayer.getSource().getFeatures();
         aussieCitiesFeatures.forEach(function(feature) {
             feature.setStyle(aussieCitiesStyle);
         })
 
-        feature.setStyle(styleForSelect);
+// home element - change content
+        if (clickedAnchorElement.id === 'Home') {
+            mapView.animate({center: austrCenterCoordinate}, {zoom: 4})
+            cityNameElement.innerHTML = 'Welcome to Australia';
+            cityImageElement.setAttribute('src', './data/City_images/Australian_Flag.jpg'); 
+        } else {
+// change view and content based on feature
+            feature.setStyle(styleForSelect);
+            let featureCoordinates = feature.get('geometry').getCoordinates();
+            mapView.animate({center: featureCoordinates}, {zoom: 5});
+            let featureName = feature.get('Cityname');
+            let featureImage = feature.get('Cityimage');
+            cityNameElement.innerHTML = 'Name of the city: ' + featureName;
+            cityImageElement.setAttribute('src', './data/City_images/' + featureImage + '.jpg'); 
+        }
+    }
 
-        let featureName = feature.get('Cityname');
-        let featureImage = feature.get('Cityimage');
-        // console.log(featureName)
-        // console.log(featureImage)
-        cityNameElement.innerHTML = 'Name of the city: ' + featureName;
-        cityImageElement.setAttribute('src', './data/City_images/' + featureImage + '.jpg'); 
+// navigation button logic 
+    const anchorNavElements = document.querySelectorAll('.column-navigation > a');
+    for (let anchorNavElement of anchorNavElements) {
+        anchorNavElement.addEventListener('click', function(e) {
+            let clickedAnchorElement = e.currentTarget;
+            let clickedAnchorElementID = clickedAnchorElement.id;
+            let aussieCitiesFeatures = austCitiesLayer.getSource().getFeatures();
+            aussieCitiesFeatures.forEach(function(feature) {
+                let featureCityName = feature.get('Cityname');
+                if (clickedAnchorElementID === featureCityName) {
+                    mainLogic(feature, clickedAnchorElement);
+                }
+            })
+            if (clickedAnchorElementID === 'Home') {
+                mainLogic(undefined, clickedAnchorElement);
+            }
+        })
     }
 }
