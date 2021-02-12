@@ -1,0 +1,89 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 1,
+        "Cityname": "Mestia",
+        "Cityimage": "Mestia_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.043801776082425, 42.71209716796875]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 2,
+        "Cityname": "Eyjafjallajokull",
+        "Cityimage": "Eyjafjallajokull_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-19.6019556, 63.6258564]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 3,
+        "Cityname": "Haines",
+        "Cityimage": "Haines_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-135.3430573, 59.0831232]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 4,
+        "Cityname": "Gokyo",
+        "Cityimage": "Gokyo_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.694588, 27.954088]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 5,
+        "Cityname": "SantaMarta",
+        "Cityimage": "SantaMarta_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.20166778564453, 11.247221946716309]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 6,
+        "Cityname": "MountAspiring",
+        "Cityimage": "MountAspiring_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [168.7279571, -44.3841635]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 7,
+        "Cityname": "Alps",
+        "Cityimage": "Alps_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.3927685, 47.2654296]
+      }
+    }
+  ]
+}
