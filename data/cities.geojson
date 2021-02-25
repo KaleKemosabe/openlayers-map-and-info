@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "ID": 1,
-        "Cityname": "Mestia",
+        "Cityname": "Georgian vuoristo",
         "Cityimage": "Mestia_Image"
       },
       "geometry": {
@@ -17,7 +17,7 @@
       "type": "Feature",
       "properties": {
         "ID": 2,
-        "Cityname": "Eyjafjallajokull",
+        "Cityname": "Eyjafjallajokull huiputus",
         "Cityimage": "Eyjafjallajokull_Image"
       },
       "geometry": {
@@ -29,7 +29,7 @@
       "type": "Feature",
       "properties": {
         "ID": 3,
-        "Cityname": "Haines",
+        "Cityname": "Haines, Alaska",
         "Cityimage": "Haines_Image"
       },
       "geometry": {
@@ -41,7 +41,7 @@
       "type": "Feature",
       "properties": {
         "ID": 4,
-        "Cityname": "Gokyo",
+        "Cityname": "Gokyo Ri huiputus",
         "Cityimage": "Gokyo_Image"
       },
       "geometry": {
@@ -53,7 +53,7 @@
       "type": "Feature",
       "properties": {
         "ID": 5,
-        "Cityname": "SantaMarta",
+        "Cityname": "Kolumbian rannikko",
         "Cityimage": "SantaMarta_Image"
       },
       "geometry": {
@@ -65,7 +65,7 @@
       "type": "Feature",
       "properties": {
         "ID": 6,
-        "Cityname": "MountAspiring",
+        "Cityname": "Queenstownin ympäristö",
         "Cityimage": "MountAspiring_Image"
       },
       "geometry": {
@@ -77,7 +77,7 @@
       "type": "Feature",
       "properties": {
         "ID": 7,
-        "Cityname": "Alps",
+        "Cityname": "Dolomiitit",
         "Cityimage": "Alps_Image"
       },
       "geometry": {

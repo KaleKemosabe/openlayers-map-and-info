@@ -93,6 +93,13 @@ function init() {
     const cityImageElement = document.getElementById('cityimage');
     const mapView = map.getView();
 
+    // add cursor pointer on map
+    map.on('pointermove', function(e) {
+        var pixel = map.getEventPixel(e.originalEvent);
+        var hit = map.hasFeatureAtPixel(pixel);
+        map.getViewport().style.cursor = hit ? 'pointer' : '';
+    });
+
     map.on('singleclick', function(evt) {
 // get coordinates from map
         // console.log(evt.coordinate)
@@ -127,7 +134,7 @@ function init() {
             mapView.animate({center: featureCoordinates}, {zoom: 6});
             let featureName = feature.get('Cityname');
             let featureImage = feature.get('Cityimage');
-            cityNameElement.innerHTML = 'Name of the city: ' + featureName;
+            cityNameElement.innerHTML = 'Kohde: ' + featureName;
             cityImageElement.setAttribute('src', './data/City_images/' + featureImage + '.jpg'); 
         }
     }
