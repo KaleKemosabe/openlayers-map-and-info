@@ -6,7 +6,7 @@ function init() {
         view: new ol.View({
             center: centerCoordinates,
             zoom: 0,
-            // extent: [11644482.371265175, -5927677.981920381, 17897308.66780227, 423055.8371644793]
+            // extent: [0,0,0,0]
         }),
         layers: [
             new ol.layer.Tile({
@@ -49,7 +49,7 @@ function init() {
     }
 
 
-    // style for highlighted
+// style for highlighted
     const styleForSelect = function(feature) {
         let cityID = feature.get('ID');
         let cityIDString = cityID.toString();
@@ -93,7 +93,7 @@ function init() {
     const cityImageElement = document.getElementById('cityimage');
     const mapView = map.getView();
 
-    // add cursor pointer on map
+// add cursor pointer on map
     map.on('pointermove', function(e) {
         var pixel = map.getEventPixel(e.originalEvent);
         var hit = map.hasFeatureAtPixel(pixel);
@@ -125,7 +125,7 @@ function init() {
 // home element - change content
         if (clickedAnchorElement.id === 'Home') {
             mapView.animate({center: centerCoordinates}, {zoom: 2})
-            cityNameElement.innerHTML = 'Maailmanlistan TOP-7';
+            cityNameElement.innerHTML = 'Etureppulaiset on käyny myös maailmalla. Tässä muutama paikka missä tykättiin vaeltaa.';
             cityImageElement.setAttribute('src', './data/City_images/Home_Image.jpg'); 
         } else {
 // change view and content based on feature
