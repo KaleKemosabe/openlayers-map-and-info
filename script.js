@@ -125,7 +125,7 @@ function init() {
 // home element - change content
         if (clickedAnchorElement.id === 'Home') {
             mapView.animate({center: centerCoordinates}, {zoom: 2})
-            cityNameElement.innerHTML = 'Etureppulaiset on käyny myös maailmalla. Tässä muutama paikka missä tykättiin vaeltaa.';
+            cityNameElement.innerHTML = 'I used udemy tutorial as a base for this project. Link in the footer.';
             cityImageElement.setAttribute('src', './data/City_images/Home_Image.jpg'); 
         } else {
 // change view and content based on feature

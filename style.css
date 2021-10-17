@@ -17,11 +17,12 @@ p {
 }
 
 h1 {
-  font-family: "Pacifico", cursive;
+  font-family: "Bebas Neue", cursive;
   letter-spacing: 0.2rem;
 }
 
 h1.main-heading {
+  font-family: "Bebas Neue", cursive;
   font-size: 3rem;
   padding-top: 3rem;
 }
@@ -37,7 +38,7 @@ header {
 }
 
 #navbar h1 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   color: #ffffff;
 }
 
@@ -158,9 +159,13 @@ footer a {
   h1 {
     font-size: 2rem;
   }
+  h1.main-heading {
+    font-size: 2rem;
+    padding-top: 3rem;
+  }
   .grid-container {
     grid-template-columns: auto;
-    grid-template-rows: 5vh 50vh 45vh;
+    grid-template-rows: 5vh 50vh 80vh;
   }
   .column-navigation a {
     font-size: 10px;
